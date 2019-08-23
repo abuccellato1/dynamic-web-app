@@ -20,8 +20,7 @@ var indexRoutes     = require("./routes/index"),
     servicesRoutes  = require("./routes/services");
 
 // SETUP 
-mongoose.connect("mongodb://localhost/goodfellas");
-// mongoose.connect(process.env.MONGO);
+mongoose.connect(process.env.MONGO);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -31,7 +30,7 @@ app.use(expressSanitizer());
 
 // PASSPORT LOGIC
 app.use(require("express-session")({
-    secret: "testsecret",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }));
