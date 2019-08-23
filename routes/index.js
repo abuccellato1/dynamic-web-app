@@ -21,10 +21,10 @@ router.post("/login", passport.authenticate("local", {
     }) ,function(req, res){
 });
 
-// REGISTER PAGE
-router.get("/register", function (req, res){
-    res.render("register");
-})
+// // REGISTER PAGE
+// router.get("/register", function (req, res){
+//     res.render("register");
+// })
 
 // REGISTER LOGIC
 router.post("/register", function (req, res){
