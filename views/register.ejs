@@ -1,0 +1,43 @@
+<%include ./partials/header.ejs %>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-12 m-auto">
+            
+            <!-- Material form login -->
+            <div class="card mb-3">
+            
+              <h5 class="card-header info-color white-text text-center py-4">
+                <strong>REGISTER</strong>
+              </h5>
+            
+              <!--Card content-->
+              <div class="card-body px-lg-5 pt-0">
+            
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;" action="/register" method="POST">
+            
+                  <!-- Username -->
+                  <div class="md-form">
+                    <input type="text" name="username" placeholder ="username">
+                  </div>
+            
+                  <!-- Password -->
+                  <div class="md-form">
+                    <input type="password" name="password" placeholder ="password">
+                  </div>
+                  <!-- SUBMIT BUTTON -->
+                    <div class="text-center my-4">
+                        <button type="submit" class=" btn btn-rounded btn-info white-text text-uppercase">Create User</button>
+                    </div>
+                </form>
+                <!-- Form -->
+            
+              </div>
+            
+            </div>
+            <!-- Material form login -->
+            
+        </div>
+    </div>
+</div>
+<% include ./partials/footer.ejs %>

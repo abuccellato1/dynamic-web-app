@@ -1,0 +1,46 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+  <!-- Section: Pricing v.3 -->
+  <section class="text-center my-5">
+  
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Our Services</h2>
+    <!-- Section description -->
+    <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
+      eum porro a pariatur veniam.</p>
+    <!-- Grid row -->
+    <div class="row">
+      <% Services.forEach(function(services){ %>
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+        <!-- Card -->
+        <div class="card">
+          <!-- Content -->
+          <div class="card-body">
+            <!-- Offer -->
+            <h5 class="mb-4"><%= services.product %></h5>
+            <div class="d-flex justify-content-center">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="img-fluid rounded" src="<%= services.image %>">
+              </div>
+            </div>
+            <!-- Price -->
+            <h2 class="font-weight-bold my-4">$ <%= services.price %></h2>
+            <p class="grey-text"><%= services.productNumber %></p>
+            <p class="grey-text"><%= services.description %></p>
+            <a class="btn btn-light-blue btn-rounded" href="/services/<%= services._id %>">Learn More</a>
+  
+          </div>
+          <!-- Content -->
+        </div>
+        <!-- Card -->
+      </div>
+      <!-- Grid column -->
+       <% }); %>
+    </div>
+    <!-- Grid row -->
+  </section>
+  <!-- Section: Pricing v.3 -->
+</div>
+<% include ../partials/footer.ejs %>

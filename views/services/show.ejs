@@ -1,0 +1,13 @@
+<% include ../partials/header.ejs %>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card m-3 p-2">
+            <h2 class="text-center"><strong><%= services.product %></strong></h2>
+            <h5 class="text-center">$<%= services.price %></h5>
+            <p class=" text-center grey-text mb-0"><%= services.productNumber %></p>
+            <hr>
+            <p class="card-text"><%= services.description %></p>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>
