@@ -9,7 +9,7 @@ var ServiceSchema = new mongoose.Schema({
    author: {
       id: {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "User"
+         ref: "Users"
       },
       username: String
    },
